@@ -48,10 +48,20 @@ local Button = InfTab:CreateButton({
    Name = "Get Ur Money Here! 💸",
    Callback = function()
    local args = {
-    [1] = 2000000000000000000000000000
+    [1] = 100000000000000000000000000
 }
 
-game:GetService("ReplicatedStorage").Honeypot.Internal.RemoteStorage:FindFirstChild("CollectCash - RemoteEvent"):FireServer(unpack(args))
+game:GetService("ReplicatedStorage").Honeypot.Internal.RemoteStorage:FindFirstChild("GiveLuckyBlockReward - RemoteEvent"):FireServer(unpack(args))
+   end,
+})
 
+local Button = InfTab:CreateButton({
+   Name = "Spin As Many time as you need! 💸",
+   Callback = function()
+    local args = {
+    [1] = "9051fd37-ec70-40d8-8b27-07211f9c0049"
+}
+
+game:GetService("ReplicatedStorage").Honeypot.Internal.RemoteStorage:FindFirstChild("ClaimLuckyBlock - RemoteEvent"):FireServer(unpack(args))
    end,
 })
